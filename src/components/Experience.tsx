@@ -23,43 +23,41 @@ export function Experience() {
           </p>
         </div>
 
+        {/* Two-column card grid, reverse-chronological reading left-to-right
+            then down a row — so the default 4-role view lands as a clean 2x2. */}
         <ol className="timeline">
           {shown.map((role) => (
-            <li className="timeline__item" key={`${role.company}-${role.period}`}>
-              <div className="timeline__marker" aria-hidden>
-                <span className="timeline__year">{role.start}</span>
+            <li className="timeline__card" key={`${role.company}-${role.period}`}>
+              <span className="timeline__year">{role.start}</span>
+
+              <div className="timeline__header">
+                <h3 className="timeline__role">{role.title}</h3>
+                <p className="timeline__company">
+                  {role.company}
+                  {role.project && <span className="timeline__project"> — {role.project}</span>}
+                </p>
+                <p className="timeline__meta">
+                  <span>{role.period}</span>
+                  <span className="timeline__dot" aria-hidden>
+                    ·
+                  </span>
+                  <span>{role.location}</span>
+                </p>
               </div>
 
-              <article className="timeline__card">
-                <div className="timeline__header">
-                  <h3 className="timeline__role">{role.title}</h3>
-                  <p className="timeline__company">
-                    {role.company}
-                    {role.project && <span className="timeline__project"> — {role.project}</span>}
-                  </p>
-                  <p className="timeline__meta">
-                    <span>{role.period}</span>
-                    <span className="timeline__dot" aria-hidden>
-                      ·
-                    </span>
-                    <span>{role.location}</span>
-                  </p>
-                </div>
+              <ul className="timeline__highlights">
+                {role.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
 
-                <ul className="timeline__highlights">
-                  {role.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
-
-                <ul className="timeline__stack" aria-label={`Stack at ${role.company}`}>
-                  {role.stack.map((tech) => (
-                    <li className="chip" key={tech}>
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-              </article>
+              <ul className="timeline__stack" aria-label={`Stack at ${role.company}`}>
+                {role.stack.map((tech) => (
+                  <li className="chip" key={tech}>
+                    {tech}
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ol>
