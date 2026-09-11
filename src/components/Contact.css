@@ -1,0 +1,101 @@
+.contact__panel {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft corner wash so the closing panel does not read as a plain box. */
+.contact__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 80% at 100% 0%,
+    color-mix(in oklab, var(--primary) 10%, transparent),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.contact__intro,
+.contact__channels {
+  position: relative;
+}
+
+.contact__intro .section__lead {
+  font-size: var(--text-base);
+}
+
+.contact__cv {
+  margin-top: var(--space-5);
+}
+
+.contact__channels {
+  display: grid;
+  gap: var(--space-3);
+  align-content: center;
+}
+
+.contact__channel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease),
+    background-color var(--dur-fast) var(--ease);
+}
+
+.contact__channel:hover {
+  border-color: var(--primary-border);
+  background: var(--primary-soft);
+  transform: translateX(3px);
+  color: var(--ink);
+}
+
+.contact__icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--primary);
+}
+
+.contact__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.contact__label {
+  font-size: var(--text-xs);
+  color: var(--ink-subtle);
+}
+
+.contact__value {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 860px) {
+  .contact__panel {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    gap: var(--space-8);
+    padding: var(--space-8);
+  }
+}

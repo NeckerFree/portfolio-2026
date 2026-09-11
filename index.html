@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <title>Elio Cortés — Backend Developer (C# / .NET)</title>
+    <meta
+      name="description"
+      content="Backend Software Engineer with 15+ years building scalable, secure applications in C#, .NET and ASP.NET Core, with cloud and DevOps experience on AWS and Azure."
+    />
+    <meta name="author" content="Elio Cortés" />
+    <meta name="theme-color" content="#5b45e0" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f0e1a" media="(prefers-color-scheme: dark)" />
+
+    <!-- Social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Elio Cortés — Backend Developer (C# / .NET)" />
+    <meta
+      property="og:description"
+      content="15+ years of backend engineering in C#, .NET and ASP.NET Core. Microservices, Clean Architecture, AWS and Azure."
+    />
+    <meta property="og:url" content="https://neckerfree.github.io/portfolio-2026/" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/8497300?v=4" />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Fonts: display + body + mono. preconnect so the first paint is not
+         blocked longer than it must be. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply the stored theme before first paint so a dark-mode visitor never
+         sees a white flash. Kept inline and tiny on purpose. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('portfolio:theme');
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {
+          /* storage blocked — fall back to the light default */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
