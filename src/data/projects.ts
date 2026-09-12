@@ -72,6 +72,7 @@ export const projectSources: ProjectSource[] = [
     description:
       'Full-stack student records application: a .NET Minimal API over SQLite with an Angular front end.',
     tools: ['.NET Core', 'C#', 'Minimal APIs', 'Angular', 'TypeScript', 'SQLite'],
+    highlight: 'Students Web App is a Fullstack application that implements an Angular App consumming a Minimal API service to manage the CRUD of a Sqlite database with a Student table.',
   },
   {
     repo: 'automated-ui-testing-selenium',
