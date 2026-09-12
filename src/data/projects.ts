@@ -72,7 +72,7 @@ export const projectSources: ProjectSource[] = [
     description:
       'Full-stack student records application: a .NET Minimal API over SQLite with an Angular front end.',
     tools: ['.NET Core', 'C#', 'Minimal APIs', 'Angular', 'TypeScript', 'SQLite'],
-    highlight: 'Students Web App is a Fullstack application that implements an Angular App consumming a Minimal API service to manage the CRUD of a Sqlite database with a Student table.',
+    highlight: 'Full-stack student management app built with Angular, .NET Minimal APIs, EF Core, SQLite, Swagger, and unit testing.',
   },
   {
     repo: 'automated-ui-testing-selenium',
@@ -88,5 +88,6 @@ export const projectSources: ProjectSource[] = [
     description:
       'React front end for a rental marketplace built to make housing search fair and transparent, deployed on AWS Amplify.',
     tools: ['React', 'TypeScript', 'Vite', 'AWS Amplify', 'AWS CDK', 'React Router'],
+    highlight: 'AWS cloud-based housing rental marketplace built with React, TypeScript, AWS Amplify, Cognito, Lambda, API Gateway, DynamoDB, CDK, CloudFront, WAF, and CI/CD.',
   },
 ];
