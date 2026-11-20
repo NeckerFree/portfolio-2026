@@ -324,7 +324,7 @@ export const profile: Profile = {
     {
       title: 'Systems Engineering — Bachelor’s Degree',
       institution: 'National University of Colombia',
-      period: 'Graduated Mar 2000',
+      period: '',
       detail: 'Thesis: Fast Fourier Transform (FFT) using parallel processing.',
     },
   ],
