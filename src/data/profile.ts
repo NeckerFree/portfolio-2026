@@ -19,10 +19,10 @@ export const profile: Profile = {
   location: 'Bogotá, Colombia — open to remote',
   avatar: 'https://avatars.githubusercontent.com/u/8497300?v=4',
   summary:
-    'Backend Software Engineer with 15+ years of experience designing, developing and maintaining scalable, secure applications using C#, .NET and ASP.NET Core. Strong expertise in microservices, RESTful APIs, Domain-Driven Design, Clean Architecture, distributed systems and relational databases. I design and integrate cloud solutions on AWS and Azure, and implement CI/CD and Infrastructure as Code with GitHub Actions, Terraform, AWS CDK and Ansible — with enough React to collaborate effectively across full-stack teams.',
+    'Backend Software Engineer with 10+ years of experience designing, developing and maintaining scalable, secure applications using C#, .NET and ASP.NET Core. Strong expertise in microservices, RESTful APIs, Domain-Driven Design, Clean Architecture, distributed systems and relational databases. I design and integrate cloud solutions on AWS and Azure, and implement CI/CD and Infrastructure as Code with GitHub Actions, Terraform, AWS CDK and Ansible — with enough React to collaborate effectively across full-stack teams.',
 
   stats: [
-    { label: 'Years building software', value: '15+' },
+    { label: 'Years building software', value: '10+' },
     { label: 'Core stack', value: '.NET / C#' },
     { label: 'Clouds', value: 'AWS · Azure' },
     { label: 'Based in', value: 'Colombia' },
